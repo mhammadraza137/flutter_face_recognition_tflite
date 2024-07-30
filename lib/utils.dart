@@ -5,6 +5,7 @@ import "package:camera/camera.dart";
 import "package:flutter/foundation.dart";
 import "package:google_mlkit_face_detection/google_mlkit_face_detection.dart";
 import "package:image/image.dart" as img_lib;
+import "package:tflite_flutter/tflite_flutter.dart";
 
 import "camera_data.dart";
 
@@ -129,4 +130,5 @@ class Utils {
     }
     return convertedBytes.buffer.asFloat32List();
   }
+
 }

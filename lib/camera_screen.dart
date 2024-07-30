@@ -193,12 +193,12 @@ class _CameraScreenState extends State<CameraScreen> {
   Future<void> recognize(img_lib.Image img) async {
     List input = Utils.imageToByteListFloat32(img, 112, 128, 128);
     input = input.reshape([1, 112, 112, 3]);
-    List output = Float32List(1 * 192).reshape([1, 192]);
-    // List output = Float32List(1 * 128).reshape([1, 128]);
+    // List output = Float32List(1 * 192).reshape([1, 192]);
+    List output = Float32List(1 * 128).reshape([1, 128]);
     debugPrint("output before : $output");
     interpreter?.run(input, output);
-    output = output.reshape([192]);
-    // output = output.reshape([128]);
+    // output = output.reshape([192]);
+    output = output.reshape([128]);
       faceEmb = List.from(output);
     // data['kala'] = e1;
     debugPrint("output after : $output : $faceEmb");
@@ -282,7 +282,8 @@ class _CameraScreenState extends State<CameraScreen> {
       ));
 
       var interpreterOptions = InterpreterOptions()..addDelegate(gpuDelegateV2);
-      interpreter = await Interpreter.fromAsset('assets/mobile_face_net.tflite', options: interpreterOptions);
+      interpreter = await Interpreter.fromAsset('assets/face_recog_model.tflite',
+          options: interpreterOptions);
     } on Exception {
       debugPrint('Failed to load model.');
     }

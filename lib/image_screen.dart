@@ -205,8 +205,7 @@ class _ImageScreenState extends State<ImageScreen> {
 
       var interpreterOptions = InterpreterOptions()
         ..addDelegate(gpuDelegateV2);
-      // interpreter = await Interpreter.fromAsset('assets/mobilefacenet.tflite',
-      //     options: interpreterOptions);
+
       interpreter = await Interpreter.fromAsset('assets/face_recog_model.tflite',
           options: interpreterOptions);
     } on Exception {
