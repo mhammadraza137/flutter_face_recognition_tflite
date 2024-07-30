@@ -7,6 +7,7 @@ Developed a Flutter project for face detection and recognition using packages in
 - [image](https://pub.dev/packages/image)
 - [google_mlkit_face_detection](https://pub.dev/packages/google_mlkit_face_detection)
 - [image_picker](https://pub.dev/packages/image_picker) 
+
 The app supports real-time face detection from the camera and image recognition from the gallery.
 
 ## Getting Started
