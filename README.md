@@ -12,7 +12,22 @@ The app supports real-time face detection from the camera and image recognition 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started add the following packages mentioned above. 
+I have set my min sdk version to 26 in my app/build.gradle
+```
+defaultConfig {
+        // your other config
+        minSdkVersion 26
+    }
+```
+I have also updated my kotlin version in android/settings.gradle
+```
+plugins {
+    id "org.jetbrains.kotlin.android" version "1.9.10" apply false
+}
+```
+
+if you have any other issues with your project. Please do check the this project files to follow every necessary things.
 
 A few resources to get you started if this is your first Flutter project:
 
