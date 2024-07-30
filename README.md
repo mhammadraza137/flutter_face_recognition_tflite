@@ -1,7 +1,6 @@
-# face_recognition_tflite
+# Face Detection and Recognition in Flutter
 
-A new Flutter project.
-
+Developed a Flutter project for face detection and recognition using packages including tflite_flutter, path_provider, camera, image, google_mlkit_face_detection, and image_picker. The app supports real-time face detection from the camera and image recognition from the gallery.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
